@@ -1,0 +1,5 @@
+{
+	"dep_a": "http://127.0.0.1:8082/components/dep_a/dep_a.js",
+	"dep_b": "http://127.0.0.1:8082/components/dep_b/dep_b.js",
+	"header": "http://127.0.0.1:8082/components/header/header.js"
+}
