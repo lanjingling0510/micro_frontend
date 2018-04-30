@@ -1,15 +1,8 @@
 
 
 require.config({
-  baseUrl: 'js',
-  paths: {
-    "react": "http://127.0.0.1:8082/vendor/react_abb62e8eba4b6f09901a",
-    "react-dom": "http://127.0.0.1:8082/vendor/react-dom_577522af7791ea7b89e7",
-    "regexparam": "http://127.0.0.1:8082/vendor/regexparam_b2f342b10ca93fcde64d",
-    "dep_a": "http://127.0.0.1:8082/components/dep_a/dep_a",
-    "dep_b": "http://127.0.0.1:8082/components/dep_b/dep_b",
-    "header": "http://127.0.0.1:8082/components/header/header"
-  }
+  baseUrl: window.__config_static_host__,
+  paths: window.__config_paths__
 });
 
 require(['dep_a', 'dep_b'], function(Dep_a, Dep_b) {

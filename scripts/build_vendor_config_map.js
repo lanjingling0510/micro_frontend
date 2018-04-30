@@ -1,6 +1,6 @@
 const fs = require('fs-extra');
 const config = require('../config');
-const url = require('url');
+const path = require('path');
 
 
 function buildConfigMap({entrypoints}) {
@@ -8,7 +8,7 @@ function buildConfigMap({entrypoints}) {
   for (const name in entrypoints) {
     if (entrypoints.hasOwnProperty(name)) {
       const value = entrypoints[name];
-      map[name] = url.resolve(config.publicPath, config.vendorPath + '/' + value.assets[0])
+      map[name] = path.join(config.vendorPath, path.basename(value.assets[0], '.js'))
     }
   }
 

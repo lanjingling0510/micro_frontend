@@ -4,7 +4,7 @@ import buildConfigMap from '../../scripts/build_component_config_map';
 import path from 'path';
 
 const config = require('../../config');
-const configPaths = config.getPaths('../..');
+const configPaths = config.getPaths();
 const componentPath = configPaths.appComponents;
 const distPath = path.join(componentPath, packageInfo.name, `./${packageInfo.name}.js`);
 

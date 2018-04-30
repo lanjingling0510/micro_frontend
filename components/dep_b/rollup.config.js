@@ -3,7 +3,7 @@ import packageInfo from './package.json';
 import path from 'path';
 import buildConfigMap from '../../scripts/build_component_config_map';
 const config = require('../../config');
-const configPaths = config.getPaths('../..');
+const configPaths = config.getPaths();
 const componentPath = configPaths.appComponents;
 const distPath = path.join(componentPath, packageInfo.name, `./${packageInfo.name}.js`);
 

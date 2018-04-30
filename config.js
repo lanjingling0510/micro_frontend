@@ -6,18 +6,26 @@ const config = {
   // 静态路径
   publicPath: 'http://127.0.0.1:8082/',
 
-  vendorPath: 'vendor',
+  vendorPath: 'public/vendor',
 
-  componentPath: 'components',
+  componentPath: 'public/components',
 
-    // 获得常量路径
-    getPaths: getPaths
+  // 获得常量路径
+  getPaths: getPaths,
+
+  // 获得组件路径
+  getComponentPath: getComponentPath
 }
 
 
+function getComponentPath(name, filename) {
+  const appDirectory = realpathSync(__dirname);
+  return resolve(appDirectory, 'public/components', name, filename);
+}
 
-function getPaths(cwd) {
-  const appDirectory = realpathSync(cwd);
+
+function getPaths() {
+  const appDirectory = realpathSync(__dirname);
   function resolveApp(relativePath) {
     return resolve(appDirectory, relativePath);
   }

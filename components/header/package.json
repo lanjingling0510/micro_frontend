@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+      "dev": "node ./start.js",
       "build": "rollup -c ./rollup.config.js"
     },
     "author": "",
