@@ -123,11 +123,16 @@ define(['exports', 'react', 'react-dom'], function (exports, React, ReactDOM) { 
     return Header;
   }(React.Component);
 
-  function headerFactory(root, store) {
-    ReactDOM.render(React.createElement(Header, null), root);
+  function mount(element, store) {
+    ReactDOM.render(React.createElement(Header, null), element);
   }
 
-  exports.headerFactory = headerFactory;
+  function unmount(element) {
+    ReactDOM.unmountComponentAtNode(element);
+  }
+
+  exports.mount = mount;
+  exports.unmount = unmount;
   exports.Header = Header;
 
   Object.defineProperty(exports, '__esModule', { value: true });

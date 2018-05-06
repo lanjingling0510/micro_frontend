@@ -8,11 +8,15 @@ class Header extends React.Component {
   }
 }
 
-function headerFactory(root, store) {
-  ReactDOM.render(<Header />, root);
+function mount(element, store) {
+  ReactDOM.render(<Header />, element);
 }
 
-export {headerFactory};
+function unmount(element) {
+  ReactDOM.unmountComponentAtNode(element);
+}
+
+export {mount, unmount};
 export {Header};
 
 

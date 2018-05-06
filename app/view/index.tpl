@@ -11,7 +11,6 @@
     <style>
         .module {
             width: 100%;
-            height: 100px;
             text-align: center;
             padding: 30px;
             position: relative;
@@ -21,7 +20,9 @@
 <body>
     <div id="module1" class="module"></div>
     <div id="module2" class="module"></div>
-    <div id="header" class="module"></div>
+
+    <div data-module="header" data-context="@media (min-width:30em)"></div>
+
     <script>
         window.__config_paths__ = {{configPaths | dump | safe }};
         window.__config_static_host__ = "{{staticHost}}";
